@@ -53,7 +53,7 @@
     if(page == null && line == null && scannedTextObj.length > 0 ){
         console.log("No match found");                                       /*If theres no match console print no match found*/
     }
- 
+
     var result = {
         "SearchTerm": searchTerm,                                             
         "Results": [ { ISBN:  book, Page: page, Line: line }]

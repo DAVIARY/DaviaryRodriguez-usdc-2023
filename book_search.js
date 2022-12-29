@@ -38,9 +38,9 @@
 
                 if(string.match(searchTerm)){                                        /*if statement to check if the word is in "Text"*/
                     //console.log("Match Found!")                                    /*Console for matching words*/
-                    book = scannedTextObj[0].ISBN;                                   /*Setting book variable to "ISBN"*/
-                    page = scannedTextObj[0].Content[i].Page;                        /*Setting page variable to "Page"*/
-                    line = scannedTextObj[0].Content[i].Line;                        /*Setting line variable to "Line"*/
+                    book = scannedTextObj[y].ISBN;                                   /*Setting book variable to "ISBN"*/
+                    page = scannedTextObj[y].Content[i].Page;                        /*Setting page variable to "Page"*/
+                    line = scannedTextObj[y].Content[i].Line;                        /*Setting line variable to "Line"*/
                     break;                                                           /*Stop the loop after finding a match*/
                 }
 

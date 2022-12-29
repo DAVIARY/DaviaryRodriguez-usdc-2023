@@ -7,7 +7,7 @@
  * to run the code any way you like, but this is similar to how we will
  * run your code submission.
  * 
- * t Developer Tools in Chrome are available under the "..." menu, 
+ * the Developer Tools in Chrome are available under the "..." menu, 
  * futher hidden under the option "More Tools." In Firefox, they are 
  * under the hamburger (three horizontal lines), also hidden under "More Tools." 
  */

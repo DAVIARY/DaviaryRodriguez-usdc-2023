@@ -32,8 +32,8 @@
           
             for(var i = 0; i < scannedTextObj[y].Content.length; i++){               /*Nested loop to scan through "Content*/
                 
-                for(var k = 0; k < scannedTextObj[0].Content[i].Text.length; k++){   /*Loop to scan through "Text"*/
-                    string +=  (scannedTextObj[0].Content[i].Text[k]);               /*Parse "Text" in string variable*/
+                for(var k = 0; k < scannedTextObj[y].Content[i].Text.length; k++){   /*Loop to scan through "Text"*/
+                    string +=  (scannedTextObj[y].Content[i].Text[k]);               /*Parse "Text" in string variable*/
                 }
 
                 if(string.match(searchTerm)){                                        /*if statement to check if the word is in "Text"*/

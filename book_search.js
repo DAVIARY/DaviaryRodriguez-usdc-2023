@@ -57,7 +57,7 @@
     var result = {
         "SearchTerm": searchTerm,                                             
         "Results": [ { ISBN:  book, Page: page, Line: line }]
-    };
+    }
     
     return result; 
 

@@ -27,14 +27,19 @@
     let page   = null;                                                       /* Int variable to store "Page"*/
     let line   = null;                                                       /* Int variable to store "Line"*/
 
+        
     if(scannedTextObj.length > 0)                                                    /*Checks if the JSON file has data*/
-       for(var y = 0; y < scannedTextObj.length; y++){                               /*Nested loop to scan through Books*/
-          
+        for(var y = 0; y < scannedTextObj.length; y++){                              /*Nested loop to scan through Books*/
+        console.log(y);
+       
+
             for(var i = 0; i < scannedTextObj[y].Content.length; i++){               /*Nested loop to scan through "Content*/
                 
                 for(var k = 0; k < scannedTextObj[y].Content[i].Text.length; k++){   /*Loop to scan through "Text"*/
-                    string +=  (scannedTextObj[y].Content[i].Text[k]);               /*Parse "Text" in string variable*/
+                    string += (scannedTextObj[y].Content[i].Text[k]);                /*Parse "Text" in string variable*/
                 }
+                //console.log(Content)
+                //console.log(string)
 
                 if(string.match(searchTerm)){                                        /*if statement to check if the word is in "Text"*/
                     //console.log("Match Found!")                                    /*Console for matching words*/
@@ -45,11 +50,15 @@
                 }
 
             }
-         }    
+            if(string != null && string.match(searchTerm)){                              /*if statement to check if the word is in "Text"*/
+                break;                                                                    /*Stop the loop after finding a match*/
+            }
+        }    
     else
-        console.log("JSON File Empty");                                             /*Console if JSON File is empty*/
-
+        console.log("JSON File Empty");                                           /*Console if JSON File is empty*/
+       
     
+                                
     if(page == null && line == null && scannedTextObj.length > 0 ){
         console.log("No match found");                                       /*If theres no match console print no match found*/
     }
@@ -94,7 +103,7 @@ const twentyLeaguesIn2 = [];
 
 /* JSON File with 2 books*/
 const twentyLeaguesIn3 = [
-    {
+    { 
         "Title": "Twenty Thousand Leagues Under the Sea",
         "ISBN": "9780000528531",
         "Content": [
@@ -113,8 +122,9 @@ const twentyLeaguesIn3 = [
                 "Line": 10,
                 "Text": "eyes were, I asked myself how he had managed to see, and"
             } 
-        ], 
-
+        ]
+    },
+    {
         "Title": "Twenty Thousand Leagues Under the Sun",
         "ISBN": "9780000528532",
         "Content": [
@@ -215,4 +225,8 @@ const test7result = findSearchTermInBooks("meaning", twentyLeaguesIn3);
     console.log("PASS: Test 7");
     console.log("Received:", test7result);
 
+
+    const test8result = findSearchTermInBooks("The", twentyLeaguesIn3);
+    console.log("PASS: Test 8");
+    console.log("Received:", test8result);
     

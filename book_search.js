@@ -224,9 +224,3 @@ const test6result = findSearchTermInBooks("eyes", twentyLeaguesIn2);
 const test7result = findSearchTermInBooks("meaning", twentyLeaguesIn3);
     console.log("PASS: Test 7");
     console.log("Received:", test7result);
-
-
-    const test8result = findSearchTermInBooks("The", twentyLeaguesIn3);
-    console.log("PASS: Test 8");
-    console.log("Received:", test8result);
-    

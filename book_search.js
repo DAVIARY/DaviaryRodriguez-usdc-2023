@@ -30,9 +30,7 @@
         
     if(scannedTextObj.length > 0)                                                    /*Checks if the JSON file has data*/
         for(var y = 0; y < scannedTextObj.length; y++){                              /*Nested loop to scan through Books*/
-        console.log(y);
-       
-
+ 
             for(var i = 0; i < scannedTextObj[y].Content.length; i++){               /*Nested loop to scan through "Content*/
                 
                 for(var k = 0; k < scannedTextObj[y].Content[i].Text.length; k++){   /*Loop to scan through "Text"*/

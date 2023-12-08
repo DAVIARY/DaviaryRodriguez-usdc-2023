@@ -233,13 +233,8 @@ const test7result = findSearchTermInBooks("meaning", twentyLeaguesIn3);
     console.log("Received:", test8result);
 
 
-
-
-
     function test(){
-
-        
-        
+       
         for(i = 0; 100 < 10; i++){
                 
             console.log(i);

@@ -37,7 +37,7 @@
                     string += (scannedTextObj[y].Content[i].Text[k]);                /*Parse "Text" in string variable*/
                 }
                 //console.log(Content)
-                //console.log(string)
+                //console.log(string + '\n')
 
                 if(string.match(searchTerm)){                                        /*if statement to check if the word is in "Text"*/
                     //console.log("Match Found!")                                    /*Console for matching words*/
@@ -48,19 +48,24 @@
                 }
 
             }
+           
             if(string != null && string.match(searchTerm)){                              /*if statement to check if the word is in "Text"*/
+                
                 break;                                                                    /*Stop the loop after finding a match*/
             }
         }    
     else
         console.log("JSON File Empty");                                           /*Console if JSON File is empty*/
        
-    
                                 
     if(page == null && line == null && scannedTextObj.length > 0 ){
         console.log("No match found");                                       /*If theres no match console print no match found*/
     }
-
+    if( string != null){
+        //console.log(string);
+    }
+   
+    
     var result = {
         "SearchTerm": searchTerm,                                             
         "Results": [ { ISBN:  book, Page: page, Line: line }]
@@ -222,3 +227,22 @@ const test6result = findSearchTermInBooks("eyes", twentyLeaguesIn2);
 const test7result = findSearchTermInBooks("meaning", twentyLeaguesIn3);
     console.log("PASS: Test 7");
     console.log("Received:", test7result);
+
+   const test8result = findSearchTermInBooks("the", twentyLeaguesIn3);
+    console.log("PASS: Test 8");
+    console.log("Received:", test8result);
+
+
+
+
+
+    function test(){
+
+        
+        
+        for(i = 0; 100 < 10; i++){
+                
+            console.log(i);
+
+        }
+    }
